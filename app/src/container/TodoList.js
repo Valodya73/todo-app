@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import        {connect}     from 'react-redux';
 import './../styles/App.css';
 import TodoItem from './../components/TodoItem'
 
@@ -23,4 +24,10 @@ class TodoList extends Component {
   }
 }
 
-export default TodoList;
+function mapStateToProps (state) {
+    return {
+        user: state.user
+    }
+}
+
+export default connect(mapStateToProps)(TodoList);
