@@ -59,10 +59,11 @@ class TodoList extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+ /* const mapStateToProps = (state) => {  get state  ????? or use standart method ?
+    debugger;
     return {
         store: state
     }
-};
+}; */
 
 export default connect(mapStateToProps)(TodoList);

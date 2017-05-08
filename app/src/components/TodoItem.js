@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './../styles/App.css';
-// debugger;
+import        {connect}     from 'react-redux';
 class TodoItem extends Component {
   constructor(props) {
     super(props);
@@ -30,5 +30,11 @@ class TodoItem extends Component {
 }
 
 
+const mapStateToProps = (state) => {
+    return {
+        store: state
+    }
+};
 
-export default TodoItem;
+
+export default connect(mapStateToProps)(TodoItem);
