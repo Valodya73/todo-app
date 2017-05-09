@@ -3,7 +3,7 @@
  */
 
 import * as types from './../actions/ActionsType'
-let initialState = {list: []};
+let initialState = {list: [{key: 'test-value'}]};
 
 const Todos = (state = initialState, action) => {
     switch (action.type) {
@@ -38,11 +38,10 @@ const Todos = (state = initialState, action) => {
                 list: array,
             });
 
-
         default:
             return state;
-    };
-    return initialState;
+    }
+    return state
 };
 
 export default Todos;
